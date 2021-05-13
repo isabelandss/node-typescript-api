@@ -1,20 +1,6 @@
 import { InternalError } from './../util/errors/internal-error'
 import { ForecastPoint, StormGlass } from '@src/clients/stormGlass'
-
-export enum BeachPosition {
-  S = 'S',
-  E = 'E',
-  W = 'W',
-  N = 'N',
-}
-
-export interface Beach {
-  lat: number
-  lng: number
-  name: string
-  position: BeachPosition
-  user: string
-}
+import { Beach } from '@src/models/beach'
 
 export interface BeachForecast extends Omit<Beach, 'user'>, ForecastPoint {}
 
